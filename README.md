@@ -1,8 +1,6 @@
 # Cala32nata1sasa3ganama2nata
 Amro
 ****
-: To study the work with static and constant members of the class.
- The task:
  
 **What**: Assignments for laboratory work No. 4 Static, constant and friendly members of the class
 
