@@ -35,7 +35,7 @@ Implementation is guaranteed to be compatible with g++ version 9.3.0
     g++ tests/types/Rect.cpp src/types/Rect.cpp -o tests/types/rect -std=c++17
 
 **Compilation of demonstration of changing number of present instances of Rectangle**:
-    g++ tests/types/DynamicRect.cpp /src/types/Rect.cpp -o tests/types/dyRect -std=c++17
+    g++ tests/types/DynamicRect.cpp src/types/Rect.cpp -o tests/types/dyRect -std=c++17
 
 **Compilation of demonstration of changing number of present instances of Rectangle**:
-    g++ tests/types/threadRectCount /src/types/Rect.cpp -pthread -o tests/types/threadCount -std=c++17
+    g++ tests/types/threadRectCount src/types/Rect.cpp -pthread -o tests/types/threadCount -std=c++17
