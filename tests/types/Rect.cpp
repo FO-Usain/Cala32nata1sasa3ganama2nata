@@ -29,5 +29,6 @@ int main() {
 
     } catch (const char *error) {
         std::cout << "\aError: " << error << std::endl;
+        exit(-1);
     }
 }

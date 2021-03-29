@@ -60,6 +60,12 @@ namespace Type {
         void displayInfo();
 
         /**
+         * @brief: gets the total number of instances of class Rectangle that exist at the instance of call
+         * @return int: the total number of Rectangles that exist at the time of call
+         */
+        static int getCount();
+
+        /**
          * Destructor
          */
         ~Rectangle();

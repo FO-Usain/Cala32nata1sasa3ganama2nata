@@ -15,18 +15,33 @@ public:
      * @param ox: integral representation of side OX of the Rectangle that houses this Core
      * @param oy: integral representation of side OY of the Rectangle that houses this Core
      */
-    Core(const int &ox, const int &oy) : _ox(ox), _oy(oy) {}
+    Core(const int &ox, const int &oy) : _ox(ox), _oy(oy) {
+        //increment the total number of Rectangle that now exist
+        ++_count;
+    }
 
     /**
-         * @brief: representation of side OX of the Rectangle that houses this Core
-         */
+     * @brief: representation of side OX of the Rectangle that houses this Core
+     */
     const int _ox;
 
     /**
      * @brief: representation of side OY of the Rectangle that houses this core
      */
     const int _oy;
+
+    /**
+     * @brief: keeps the total number of the instances of the class Rectangle::Core that exist the the moment of call
+     */
+    static int _count;
+
+    ~Core() {
+        //decrement the total number of instances of Rectangles that now exist
+        --_count;
+    }
 };
+//initialize the total number of RectangleCores present
+int Rect::Core::_count = 0;
 
 Rect::Rectangle(const int &OX, const int &OY) {
     //confirm that all is well
@@ -68,6 +83,11 @@ void Rect::displayInfo() {
 
     //output the length of side OY of this Rectangle
     std::cout << "side-OY: " << _core->_oy << "units" << std::endl;
+}
+
+int Rect::getCount() {
+    //ge the total number of RectangleCores that exist
+    return Core::_count;
 }
 
 Rect::~Rectangle() {
