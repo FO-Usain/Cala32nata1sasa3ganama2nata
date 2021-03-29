@@ -17,6 +17,7 @@ Amro
 
 ###### **Description**
 Assignment is broken-down into packages, as named by the present directories:
+   
     **src**: contains the implementation of external-linkage operations of components of other packages
 
     **tests**: contains use-cases of implementation
